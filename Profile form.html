@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eacccc;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #f3f6f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="file"] {
+            margin-top: 5px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>PERSONAL INFORMATION</h2>
+    <form id="profileForm">
+        <!-- Personal Data -->
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="sex">Sex:</label>
+        <select id="sex" name="sex">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+
+        <label for="contact">Contact:</label>
+        <input type="tel" id="contact" name="contact" required>
+
+        <label for="photo">Upload a Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+
+        <!-- Educational Background -->
+        <h2>Educational Background</h2>
+        <label for="academicDocuments">Upload Academic Documents:</label>
+        <input type="file" id="academicDocuments" name="academicDocuments" accept=".pdf, .doc, .docx">
+
+        <!-- Posts Ever Held -->
+        <h2>Posts Ever Held</h2>
+        <label for="post1">Post 1:</label>
+        <input type="text" id="post1" name="post1">
+
+        <label for="post2">Post 2:</label>
+        <input type="text" id="post2" name="post2">
+
+        <label for="post3">Post 3:</label>
+        <input type="text" id="post3" name="post3">
+
+        <!-- Working Experience -->
+        <h2>Working Experience</h2>
+        <label for="experience1">Experience 1:</label>
+        <input type="text" id="experience1" name="experience1">
+
+        <label for="experience2">Experience 2:</label>
+        <input type="text" id="experience2" name="experience2">
+
+        <label for="experience3">Experience 3:</label>
+        <input type="text" id="experience3" name="experience3">
+
+        <!-- Hobbies -->
+        <h2>Hobbies</h2>
+        <label for="hobby1">Hobby 1:</label>
+        <input type="text" id="hobby1" name="hobby1">
+
+        <label for="hobby2">Hobby 2:</label>
+        <input type="text" id="hobby2" name="hobby2">
+
+        <!-- Referees -->
+        <h2>Referees</h2>
+        <label for="referee1">Referee 1:</label>
+        <input type="text" id="referee1" name="referee1" required>
+
+        <label for="referee2">Referee 2:</label>
+        <input type="text" id="referee2" name="referee2" required>
+
+        <!-- Buttons -->
+        <div class="button-container">
+            <button type="button" onclick="saveForm()">Save</button>
+            <button type="button" onclick="printForm()">Print</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    function saveForm() {
+        // You can add your JavaScript logic for saving the form data here
+        alert("Form data saved!");
+    }
+
+    function printForm() {
+        // You can add your JavaScript logic for printing the form here
+        alert("Form data printed!");
+    }
+</script>
+
+</body>
+</html>
